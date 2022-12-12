@@ -1,0 +1,71 @@
+
+<!--Lista Ordenada-->
+<h1>Aprovados</h1>
+<ol>
+    <li>Bia</li>
+    <li>Ana</li>
+    <li>Pedro</li>
+    <li>João</li>
+</ol>
+
+<!--Lista Não Ordenada-->
+
+<h2>Lista de compras</h2>
+<ul class="tree">
+    <li>
+        Queijo
+    </li>
+    <li>
+        <span wm-folder>Pão</span>
+        <ul>
+            <li>De forma</li>
+            <li>Frances
+                <ul>
+                    <li>Integral</li>
+                    <li>Tradicional</li>
+                </ul>
+            </li>
+            <li>Caseiro</li>
+        </ul>
+    </li>
+    <li>
+        <span wm-folder>Alface</span>
+        <ul>
+            <li>Crespa</li>
+            <li>Lisa</li>
+        </ul>
+    </li>
+    <li>
+        <span wm-folder>Tomate</span>
+        <ul>
+            <li>Grande</li>
+            <li>pequeno</li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css"> 
+<!-- esse link ai em cima o professor já tinha criado e ele da o estilo de 'lista' que aparece 
+as linhas do lado dos itens, que foi incluido pela classe 'tree' na ul -->
+
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder =>{
+
+            folder.onclick = function (s){
+               /* 'debugger' faz aparecer um executor de código no browser para voce ir executando parte por parte */ 
+               const ul = folder.nextElementSibling
+               const d = ul.style.display
+               ul.style.display = d === 'none' ? 'block' : 'none'
+            }
+    })
+</script>
+
+<!--Lista de definições-->
+
+<h2>Principais termos do glossário </h2>
+<dl>
+    <dt>Baas</dt>
+    <dd>Backend As A Service</dd>
+    <dt>Iaas</dt>
+    <dd>Infra As A Service</dd>
+</dl>
