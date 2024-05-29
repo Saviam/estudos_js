@@ -49,7 +49,7 @@
 // console.log(sumArray([10,10,10]))
 
 
-/*Função para Encontrar a Frequência de Caracteres em uma string */
+//Função para Encontrar a Frequência de Caracteres em uma string 
 
 function charFrequency(str){
 
