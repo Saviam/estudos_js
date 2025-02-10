@@ -6,16 +6,25 @@
     <title>Document</title>
     <script>
 
-        const maior = [5,10,15,40, 90,129, 152.3];
 
-        function contar(){
-            const max = Math.max.apply(null, maior).toFixed(2);
-            alert ('o maior numero é :' + max )
+        function verif(){
+            
+           
+
+           let idade = parseInt(prompt('Insira sua idade:'));
+           
+
+
+           if(idade >= 18){
+            alert('Verificado')
+           }
+           else 
+           { alert('Não permitido')}
 
         }
     </script>
 </head>
 <body>
-    <button onclick="contar()">Clique</button>
+    <button onclick="verif()">Clique</button>
 </body>
 </html>
