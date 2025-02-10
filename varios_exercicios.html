@@ -7,24 +7,58 @@
     <script>
 
 
-        function verif(){
-            
-           
+        // function verif(){
 
-           let idade = parseInt(prompt('Insira sua idade:'));
-           
+        //    let idade = parseInt(prompt('Insira sua idade:'));
 
+        //    if(idade >= 18){
+        //     alert('Verificado')
+        //    }
+        //    else 
+        //    { alert('Não permitido')}
 
-           if(idade >= 18){
-            alert('Verificado')
-           }
-           else 
-           { alert('Não permitido')}
+        // }
 
+        function media(){
+            let num1, num2, num3;
+
+            while (true) {
+        num1 = parseFloat(prompt('Insira o primeiro número:'));
+        if (!isNaN(num1)) {
+            break; // Se o número for válido, sai do loop
+        } else {
+            alert("Por favor, insira um número válido.");
         }
+    }
+
+    // Verificar se o segundo número é válido
+    while (true) {
+        num2 = parseFloat(prompt('Insira o segundo número:'));
+        if (!isNaN(num2)) {
+            break;
+        } else {
+            alert("Por favor, insira um número válido.");
+        }
+    }
+
+    // Verificar se o terceiro número é válido
+    while (true) {
+        num3 = parseFloat(prompt('Insira o terceiro número:'));
+        if (!isNaN(num3)) {
+            break;
+        } else {
+            alert("Por favor, insira um número válido.");
+        }
+    }
+
+            const result = (num1 + num2 + num3)/3;
+
+            alert("a média é: " + result)
+            }
+        
     </script>
 </head>
 <body>
-    <button onclick="verif()">Clique</button>
+    <button onclick="media()">Clique</button>
 </body>
 </html>
