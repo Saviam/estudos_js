@@ -61,8 +61,8 @@
       
       function calcIMC (){
 
-        let peso = parseFloat(document.getElementById('p1').value);
-        let altura = parseFloat(document.getElementById('a1').value);
+        let peso = parseFloat(document.getElementById('p1').value.replace("," , "."));
+        let altura = parseFloat(document.getElementById('a1').value.replace("," , "."));
 
         const calc = peso / (altura ** 2)
         document.getElementById("res").innerHTML = `Seu IMC é ${calc.toFixed(2)}`;
