@@ -59,12 +59,23 @@
             }
       // -------------------------------------------------
       
-      
+      function calcIMC (){
 
-      
+        let peso = parseFloat(document.getElementById('p1').value);
+        let altura = parseFloat(document.getElementById('a1').value);
+
+        const calc = peso / (altura ** 2)
+        document.getElementById("res").innerHTML = `Seu IMC é ${calc.toFixed(2)}`;
+        
+      }
     </script>
 </head>
 <body>
-    <button onclick="media()">Clique</button>
+    <input type="text" id="p1" placeholder="Insira seu peso em kg">
+    <input type="text" id="a1" placeholder="Insira sua altura em metros">
+
+    <button onclick="calcIMC()">Calcular</button> 
+
+    <div id="res"> </div>
 </body>
 </html>
