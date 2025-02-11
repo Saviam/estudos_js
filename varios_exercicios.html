@@ -21,61 +21,88 @@
 
 
 //  ------  -------  Calcula média de nota ---------  -----       
-        function media(){
-            let num1, num2, num3;
+    //     function media(){
+    //         let num1, num2, num3;
 
-            while (true) {
-        num1 = parseFloat(prompt('Insira o primeiro número:'));
-        if (!isNaN(num1)) {
-            break; // Se o número for válido, sai do loop
-        } else {
-            alert("Por favor, insira um número válido.");
-        }
-    }
+    //         while (true) {
+    //     num1 = parseFloat(prompt('Insira o primeiro número:'));
+    //     if (!isNaN(num1)) {
+    //         break; // Se o número for válido, sai do loop
+    //     } else {
+    //         alert("Por favor, insira um número válido.");
+    //     }
+    // }
 
-    // Verificar se o segundo número é válido
-    while (true) {
-        num2 = parseFloat(prompt('Insira o segundo número:'));
-        if (!isNaN(num2)) {
-            break;
-        } else {
-            alert("Por favor, insira um número válido.");
-        }
-    }
+    // // Verificar se o segundo número é válido
+    // while (true) {
+    //     num2 = parseFloat(prompt('Insira o segundo número:'));
+    //     if (!isNaN(num2)) {
+    //         break;
+    //     } else {
+    //         alert("Por favor, insira um número válido.");
+    //     }
+    // }
 
-    // Verificar se o terceiro número é válido
-    while (true) {
-        num3 = parseFloat(prompt('Insira o terceiro número:'));
-        if (!isNaN(num3)) {
-            break;
-        } else {
-            alert("Por favor, insira um número válido.");
-        }
-    }
+    // // Verificar se o terceiro número é válido
+    // while (true) {
+    //     num3 = parseFloat(prompt('Insira o terceiro número:'));
+    //     if (!isNaN(num3)) {
+    //         break;
+    //     } else {
+    //         alert("Por favor, insira um número válido.");
+    //     }
+    // }
 
-            const result = (num1 + num2 + num3)/3;
+    //         const result = (num1 + num2 + num3)/3;
 
-            alert("a média é: " + result)
-            }
+    //         alert("a média é: " + result)
+    //         }
       // -------------------------------------------------
-      
-      function calcIMC (){
 
-        let peso = parseFloat(document.getElementById('p1').value.replace("," , "."));
-        let altura = parseFloat(document.getElementById('a1').value.replace("," , "."));
 
-        const calc = peso / (altura ** 2)
-        document.getElementById("res").innerHTML = `Seu IMC é ${calc.toFixed(2)}`;
+      //  ------  -------  Calcula IMC ---------  -----    
+    //   function calcIMC (){
+
+    //     let peso = parseFloat(document.getElementById('p1').value.replace("," , "."));
+    //     let altura = parseFloat(document.getElementById('a1').value.replace("," , "."));
+
+    //     const calc = peso / (altura ** 2)
+    //     document.getElementById("res").innerHTML = `Seu IMC é ${calc.toFixed(2)}`;
         
-      }
+    //   }
+
+  // -------------------------------------------------
+
+
+  function mult (){
+  let soma = 0
+
+    for (let i = 1; i <= 1000; i++){
+        if (i % 3 === 0 || i % 5 === 0){
+            soma += i;
+        }
+    }
+
+    document.getElementById("res2").innerHTML = "A soma dos multiplos é " + soma ;
+
+  }
+
     </script>
 </head>
+
 <body>
-    <input type="text" id="p1" placeholder="Insira seu peso em kg">
+    <h3>Clique para ver a soma dos multiplos de 1 até 1000</h3>
+    <button onclick="mult()">Calcular</button>
+
+    <div id="res2"></div>
+
+    <!-- <input type="text" id="p1" placeholder="Insira seu peso em kg">
     <input type="text" id="a1" placeholder="Insira sua altura em metros">
 
     <button onclick="calcIMC()">Calcular</button> 
 
-    <div id="res"> </div>
+    <div id="res"> </div> -->
+
+
 </body>
 </html>
